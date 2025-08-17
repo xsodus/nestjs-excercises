@@ -10,7 +10,7 @@ export class MessageFormatter {
    * Returns the message prefixed with a current timestamp.
    * Example output: [2024-01-30 10:30:15] Hello World!
    */
-  fomat(message: string): string {
+  format(message: string): string {
     const d = new Date();
     const pad = (n: number) => n.toString().padStart(2, '0');
     const timestamp = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;

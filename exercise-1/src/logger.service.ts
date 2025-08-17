@@ -10,7 +10,7 @@ export class LoggerService {
    * Returns the formatted value for convenience/testing.
    */
   log(message: string): string {
-    const formatted = this.formatter.fomat(message);
+    const formatted = this.formatter.format(message);
     // eslint-disable-next-line no-console
     console.log(formatted);
     return formatted;
