@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { MessageFormatter } from './message-formatter';
+import { LoggerService } from './logger.service';
 
 @Injectable()
 export class AppService {
-  constructor(private readonly formatter: MessageFormatter) {}
+  constructor(private readonly loggerService: LoggerService) {}
 
   getHello(): string {
-    return this.formatter.fomat('Hello World!');
+    return this.loggerService.log('Hello World!');
   }
 }
